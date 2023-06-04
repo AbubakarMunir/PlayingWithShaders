@@ -71,7 +71,7 @@ Material:
     - _SomeIntProperty: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StateProperty: 1
+    - _StateProperty: 0
     - _UVSec: 0
     - _UseFirstFrag: 1
     - _ZWrite: 1
