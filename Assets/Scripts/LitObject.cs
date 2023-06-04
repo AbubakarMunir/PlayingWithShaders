@@ -22,8 +22,10 @@ public class LitObject : MonoBehaviour
     }
     public void ChangeShader()
     {
-        meshRenderer.material = ColorHolder.IsEnabled ? ColorHolder.OffMaterial : ColorHolder.OnMaterial;
-        ColorHolder.IsEnabled = !ColorHolder.IsEnabled;
+        Material mat = meshRenderer.material;
+        float currentState = mat.GetFloat("_StateProperty");
+        float newState = currentState == 0 ? 1 : 0;
+        mat.SetFloat("_StateProperty", newState);
     }
 
 
